@@ -1,3 +1,4 @@
+import { API_URL } from "@/constants/api";
 import { showToast } from "@/utils/snackbar";
 import { FontAwesome } from "@expo/vector-icons";
 import { useFocusEffect } from "@react-navigation/native";
@@ -38,7 +39,7 @@ const SignIn = () => {
     //   const authUrl = "http://192.168.1.7:3000/auth/google";
 
     const authUrl =
-      "https://d862-2405-f600-8-6174-f35b-d846-8312-b130.ngrok-free.app/auth/google";
+      `${API_URL}/auth/google`;
 
     const result = await WebBrowser.openAuthSessionAsync(authUrl, redirectUri);
 
